@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<link rel="icon" href="assets/icons/feather/briefcase.svg">
+		<title>Gabriel Sabino</title>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+		<link rel="stylesheet" href="styles/styles.css" />
+	</head>
+
+	<body class="w3-light-gray">
+		<div id="theme-selection" class="w3-black w3-container w3-padding-64 w3-center">
+			<h1 class="theme-selection__header w3-jumbo w3-margin-bottom w3-animate-opacity">
+				Tema
+			</h1>
+			<div class="w3-row">
+				<span class="w3-half w3-animate-left w3-padding-48" onclick="actModoEscuro()">
+					<img class="w3-image theme-selection__icon" src="assets/icons/feather/moon.svg" alt="moon"/>
+				</span>
+				<span class="w3-half w3-animate-right w3-padding-48" onclick="actModoClaro()">
+					<img class="w3-image theme-selection__icon" src="assets/icons/feather/sun.svg" alt="sun"/>
+				</span>
+			</div>
+		</div>
+
+		<div id="main-content" hidden>
+			<nav id="sidemenu" class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+				<a href="#about" class="w3-hover-light-gray w3-bar-item w3-button w3-padding-large">
+					<img class="w3-image" src="assets/icons/feather/book-open.svg" alt="book-open"/>
+					Sobre
+				</a>
+				<a href="#work" class="w3-hover-light-gray w3-bar-item w3-button w3-padding-large">
+					<img class="w3-image" src="assets/icons/feather/airplay.svg" alt="airplay"/>
+					Trabalho
+				</a>
+				<a href="#contact" class="w3-hover-light-gray w3-bar-item w3-button w3-padding-large">
+					<img class="w3-image" src="assets/icons/feather/inbox.svg" alt="inbox"/>
+					Contatos
+				</a>
+			</nav>
+			<div id="sidemenu__dark-mode" title="Toggle Dark Mode" class="w3-padding-large" onclick="modoEscuro()">
+				<img class="w3-image" src="assets/icons/feather/moon.svg" alt="moon"/>
+				<img class="w3-image w3-hide-small" src="assets/icons/feather/sun.svg" alt="sun"/>
+			</div>
+
+			<div id="topmenu" class="w3-animate-top w3-top w3-hide-medium w3-hide-large">
+				<div class="w3-bar w3-white w3-opacity w3-hover-opacity-off w3-center w3-small">
+					<img
+						onclick="menuLateral(this)"
+						class="topmenu__item w3-bar-item w3-button w3-hover-light-gray"
+						src="assets/icons/feather/menu.svg"
+						alt="menu" />
+					<a hidden href="#about" class="topmenu__item w3-bar-item w3-button w3-hover-light-gray">
+						Sobre
+					</a>
+					<a hidden href="#work" class="topmenu__item w3-bar-item w3-button w3-hover-light-gray">
+						Trabalho
+					</a>
+					<a hidden href="#contact" class="topmenu__item w3-bar-item w3-button w3-hover-light-gray">
+						Contatos
+					</a>
+				</div>
+			</div>
+
+			<div id="sections" class="w3-padding-large">
+				<section id="home" class="w3-center w3-content w3-padding-32">
+					<h1 class="w3-jumbo w3-animate-opacity">
+						Gabriel Sabino
+					</h1>
+					<p class="w3-animate-opacity">
+						Desenvolvedor SQL
+					</p>
+				</section>
+
+				<hr class="section__divider w3-amber w3-animate-zoom" />
+
+				<section id="about" class="w3-content w3-padding-32 w3-text-gray w3-justify">
+					<h2 class="w3-center w3-text-black">
+						Sobre
+					</h2>
+					<div class="about__description w3-justify">
+						<p>
+							Sou desenvolvedor SQL Pleno (aspirando a DBA) e um entusiasta de tecnologia, de eng. de software às novidades do mercado de Hardware, tudo que "liga na tomada" me atrai.
+						</p>
+						<p> </p>
+						<p>Atualmente trabalho na
+							<a class="w3-hover-text-green" href="https://nwadv.com.br/pt/" target="_blank">
+								<b>Nelson Williams Advogados</b>
+							</a>
+							como Head de sustentação e curso <b>Análise e Desenvolvimento de Sistemas</b> na
+							<a class="w3-hover-text-red" href="http://www.fatecsorocaba.edu.br/" target="_blank">
+								<b>Fatec Sorocaba.</b>
+							</a>
+						</p>
+						<p>
+							Meus interesses, alem da tecnologia, incluem quadrinhos e War games, de preferencia com o mesmo grupo de amigos a anos .
+						</p>
+					</div>
+
+					<div id="skills" class="w3-padding-32">
+						<div class="skill pointer w3-hover-text-amber w3-margin-top w3-wide w3-animate-right">
+							<p class="skill__description">
+								Gestão de equipe
+							</p>
+							<div class="skill__container w3-dark-gray">
+								<div id="skill-1" class="skill__percentage w3-center w3-blue w3-animate-opacity" percentage="40%" ></div>
+							</div>
+						</div>
+
+						<div class="skill pointer w3-hover-text-amber w3-margin-top w3-wide w3-animate-left">
+							<p class="skill__description">
+								C#
+							</p>
+							<div class="skill__container w3-dark-gray">
+								<div id="skill-2" class="skill__percentage w3-center w3-green w3-animate-opacity" percentage="40%" ></div>
+							</div>
+						</div>
+
+						<div class="skill pointer w3-hover-text-amber w3-margin-top w3-wide w3-animate-right">
+							<p class="skill__description">
+								Java
+							</p>
+							<div class="skill__container w3-dark-gray">
+								<div id="skill-3" class="skill__percentage w3-center w3-blue w3-animate-opacity" percentage="30%" ></div>
+							</div>
+						</div>
+
+						<div class="skill pointer w3-hover-text-amber w3-margin-top w3-wide w3-animate-left">
+							<p class="skill__description">
+								Bancos Relacionais
+							</p>
+							<div class="skill__container w3-dark-gray">
+								<div id="skill-4" class="skill__percentage w3-center w3-green w3-animate-opacity" percentage="80%" ></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<hr class="section__divider w3-amber w3-animate-zoom" />
+
+				<section id="work" class="w3-content w3-padding-32">
+					<h2 class="w3-center w3-text-black">My Work</h2>
+
+					<div id="projects" class="w3-hide-small w3-hide-medium">
+						<div class="w3-row-padding">
+							<div class="w3-half">
+								<a class="pointer w3-hover-text-amber" href="https://nwadv.com.br/pt/" target="_blank">
+									<img class="w3-image" src="assets/images/NW.png" alt="image"/>
+									<p>
+										NWAD
+									</p>
+								</a>
+								Atual empresa em que atuo
+							</div>
+							<div class="w3-half">
+								<a class="pointer w3-hover-text-amber" href="https://github.com/gsabino1/PWEB" target="_blank">
+									<img class="w3-image" src="assets/images/github-project.png" alt="image"/>
+									<p>
+										GIT/PWEB
+									</p>
+								</a>
+								Repositório para projetos e exercícios da faculdade
+							</div>
+						</div>
+						
+					
+				</section>
+
+				<hr class="section__divider w3-amber w3-animate-zoom" />
+
+				<section id="contact" class="w3-content w3-center w3-padding-32 w3-text-gray w3-xlarge">
+					<h2 class="w3-center w3-text-black">
+						Contatos
+					</h2>
+
+					<a title="Sorocaba, SP" class="w3-padding-small" href="https://goo.gl/maps/zrHHBJm7ZNVnba4J6" target="_blank">
+						<img class="w3-image" src="assets/icons/feather/map-pin.svg" alt="map-pin"/>
+					</a>
+					<a title="+55 11 95336-6860" class="w3-padding-small" href="tel:+5511952211841">
+						<img class="w3-image" src="assets/icons/feather/phone-call.svg" alt="phone-call"/>
+					</a>
+					<a title="matheus.silva279@fatec.sp.gov.br" class="w3-padding-small" href="mailto:gsabino1@hotmail.com">
+						<img class="w3-image" src="assets/icons/feather/mail.svg" alt="mail"/>
+					</a>
+					<a title="LinkedIn" class="w3-padding-small" href="https://www.linkedin.com/in/gabriel-sabino-89669b136/" target="_blank">
+						<img class="w3-image" src="assets/icons/feather/linkedin.svg" alt="linkedin"/>
+					</a>
+					<a title="GitHub" class="w3-padding-small" href="https://github.com/gsabino1" target="_blank">
+						<img class="w3-image" src="assets/icons/feather/github.svg" alt="github"/>
+					</a>
+				</section>
+			</div>
+
+			<footer class="w3-center w3-padding-large w3-padding-top-64" title="Scroll to Top">
+				<a href="#">
+					<img class="w3-image" src="assets/icons/feather/chevrons-up.svg" alt="arrows-up" /> Voltar ao início
+				</a>
+			</footer>
+		</div>
+
+		<script type="text/javascript" src="scripts/topmenu.js"></script>
+		<script type="text/javascript" src="scripts/darkmode.js"></script>
+	
+	</body>
+
+</html>
